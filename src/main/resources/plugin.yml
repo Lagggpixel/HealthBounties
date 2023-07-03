@@ -1,0 +1,40 @@
+name: HealthBounties
+version: '${project.version}'
+main: me.lagggpixel.healthbounties.Main
+api-version: '1.19'
+authors: [Lagggpixel]
+commands:
+  healthbounties:
+    aliases:
+      - hb
+      - bounty
+    permission: healthbounties.player.command
+  healthbountiesadmin:
+    aliases:
+      - hbadmin
+      - hba
+      - bountyadmin
+    permission: healthbounties.admin.command
+permissions:
+  healthbounties.admin.*:
+    default: op
+    children:
+      - healthbounties.admin.command
+      - healthbounties.admin.setbounties
+      - healthbounties.admin.addbounties
+      - healthbounties.admin.subtractbounties
+  healthbounties.admin.command:
+    default: op
+  healthbounties.admin.setbounties:
+    default: op
+  healthbounties.admin.addbounties:
+    default: op
+  healthbounties.admin.subtractbounties:
+    default: op
+
+  healthbounties.player.command:
+    default: true
+  healthbounties.player.check:
+    default: true
+  healthbounties.player.withdraw:
+    default: true

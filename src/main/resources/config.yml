@@ -1,0 +1,16 @@
+# How many bounties a player will have when they first join the server
+default-bounties: 1000
+# How many bounties will a player have when they are unbanned
+unban-bounties: 1000
+# How many bounties is equivalent to one heart
+bounties-per-heart: 300
+# How many bounties will a player lose if they died to a player
+player-death-bounties: 100
+# How many bounties will a player gain if they killed a player
+player-kill-bounties: 100
+# Should a player lose bounties if they weren't killed by a player
+environmental-death-bounty-deduction: true
+# Minimum amount of hearts a player can have
+min-hearts: 10
+# Maximum amount of hearst a player can have
+max-hearts: 20

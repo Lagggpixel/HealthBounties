@@ -1,0 +1,20 @@
+# ===============================
+# Revive map recipe configuration
+# ===============================
+
+# Name
+name: "&b&lRevive map"
+# Lore
+lore:
+  - "&5Click to Revive dead players"
+product: MAP
+
+recipe:
+  - yoy
+  - oxo
+  - yoy
+
+ingredients_key:
+  x: NETHERITE_INGOT
+  o: DIAMOND_BLOCK
+  y: NETHERITE_BLOCK

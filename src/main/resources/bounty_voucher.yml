@@ -1,0 +1,11 @@
+# ============================
+# Bounty voucher configuration
+# ============================
+
+# What material should the voucher be
+material: PAPER
+# Name
+name: "&5&lBounty Card"
+# Lore
+lore:
+  - "&d{amount}"

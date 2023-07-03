@@ -1,0 +1,20 @@
+# ==========================
+# Coins recipe configuration
+# ==========================
+
+# Name
+name: "&6&lBounty Coin"
+# Lore
+lore:
+  - "&5&o50+ bounty"
+product: SUNFLOWER
+
+recipe:
+  - xox
+  - oyo
+  - xox
+
+ingredients_key:
+  x: GOLD_BLOCK
+  o: DIAMOND_BLOCK
+  y: NETHERITE_BLOCK
