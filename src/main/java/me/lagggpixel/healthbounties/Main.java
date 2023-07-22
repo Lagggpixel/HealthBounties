@@ -40,9 +40,9 @@ public final class Main extends JavaPlugin {
     private static final HashMap<Player, PlayerMenuUtility> playerMenuUtilityMap = new HashMap<>();
 
     private Integer defaultBounty;
+    private Integer maxBounties;
     private Integer defaultUnbanBounty;
     private Integer bountiesPerHeart;
-    private Integer playerDeathBounties;
     private Integer playerKillBounties;
     private Boolean environmentDeathBountyDeduction;
     private Integer minHearts;
@@ -85,9 +85,9 @@ public final class Main extends JavaPlugin {
         this.getConfig().options().copyDefaults(true);
         this.saveDefaultConfig();
         this.defaultBounty = this.getConfig().getInt("default-bounties", 1000);
+        this.maxBounties = this.getConfig().getInt("max-bounties", 4000);
         this.defaultUnbanBounty = this.getConfig().getInt("unban-bounties",1000);
         this.bountiesPerHeart = this.getConfig().getInt("bounties-per-heart", 300);
-        this.playerDeathBounties = this.getConfig().getInt("player-death-bounties", 100);
         this.playerKillBounties = this.getConfig().getInt("player-kill-bounties", 100);
         this.environmentDeathBountyDeduction = this.getConfig().getBoolean("environmental-kill-bounty-deduction", true);
         this.minHearts = this.getConfig().getInt("min-hearts", 10);

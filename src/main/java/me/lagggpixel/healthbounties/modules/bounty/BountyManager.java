@@ -21,7 +21,19 @@ public class BountyManager {
     }
 
     public static void removeDeathBounty(@NotNull UUID player) {
-        removeBounty(player, Main.getInstance().getPlayerDeathBounties());
+        int bounties = getBountyOrDefault(player);
+        if (bounties < 2000) {
+            removeBounty(player, 100);
+        }
+        else if (bounties < 3000) {
+            removeBounty(player, 200);
+        }
+        else if (bounties < 4000) {
+            removeBounty(player, 300);
+        }
+        else {
+            removeBounty(player, 400);
+        }
     }
 
     @NotNull
@@ -60,6 +72,7 @@ public class BountyManager {
     public static void addBounty(@NotNull UUID player, @NotNull Integer amount) {
         int int1 = getBountyOrDefault(player);
         int int2 = int1+amount;
+        if (amount >= Main.getInstance().getMaxBounties()) int2 = Main.getInstance().getMaxBounties();
         setBounty(player, Math.max(int2, 0));
     }
 
@@ -72,6 +85,7 @@ public class BountyManager {
 
     public static void setBounty(@NotNull UUID player, @NotNull Integer amount) {
         setDefaultBountyIfAbsent(player);
+        if (amount >= Main.getInstance().getMaxBounties()) amount = Main.getInstance().getMaxBounties();
         Main.getInstance().getBountyMap().replace(player, amount);
     }
 
