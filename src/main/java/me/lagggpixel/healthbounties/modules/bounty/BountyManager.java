@@ -39,6 +39,11 @@ public class BountyManager {
     @NotNull
     public static Boolean checkIsBanned(@NotNull Player player) {
         if (isPlayerBanned(player.getUniqueId())) {
+            player.getInventory().clear();
+            player.getInventory().setHelmet(null);
+            player.getInventory().setChestplate(null);
+            player.getInventory().setLeggings(null);
+            player.getInventory().setBoots(null);
             player.kick(Lang.BANNED.toTextComponent(), PlayerKickEvent.Cause.BANNED);
             return true;
         }
