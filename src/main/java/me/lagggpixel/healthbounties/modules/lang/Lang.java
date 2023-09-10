@@ -24,6 +24,7 @@ public enum Lang {
     UNKNOWN_BOUNTY_REVIVE_MAP("unknown-bounty-revive-map", "&cThat bounty revive map is not a valid bounty revive map. Is it duped?"),
     CLAIMED_BOUNTIES("claimed-bounties", "&cYou have claimed {amount} bounties from a {source}."),
     NOT_ENOUGH_BOUNTIES("not-enough-bounties", "&cYou don't have enough bounties to withdraw {amount}."),
+    NOT_ENOUGH_BOUNTIES_TO_CRAFT("not-enough-bounties", "&cYou don't have enough bounties to craft a bounty card."),
     WITHDRAW_SUCCESSFUL("withdraw-successful", "&cYou have successfully withdraw {amount} bounties."),
     CHECK_BOUNTIES("check-bounties", "&cYou have {amount} bounties."),
     REVIVE_PLAYER("revived-player", "&cYou have revived {player}."),
